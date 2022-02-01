@@ -1,5 +1,5 @@
-
-    let books= [
+let hello={
+    books: [
       {
         isbn: "9781593275846",
         title: "Eloquent JavaScript, Second Edition",
@@ -114,24 +114,29 @@
           "A JavaScript pattern and antipattern collection that covers function patterns, jQuery patterns, jQuery plugin patterns, design patterns, general patterns, literals and constructor patterns, object creation patterns, code reuse patterns, DOM and browser patterns",
         website: "https://shichuan.github.io/javascript-patterns/",
       },
-    ]
-  ;
+    ],
+  };
 
-  let main=document.querySelector('.main-div');
+  let boxdiv=document.querySelector(".box-div");
 
-  books.forEach((book)=>
+  hello.books.forEach((book)=>
   {
   
-  let box=document.createElement(".div");
-  let image=document.createElement("img");
-  image.src=book.image;
-  let title=document.createElement("h1");
-  title.innerText=book.title;
-  let author=document.createElement("p");
-  author.innerText=book.author;
+  let li=document.createElement("div");
+  li.classList.add('box');
+  
+  let img=document.createElement("img");
+  img.src=book.image;
+  let h=document.createElement("h");
+  h.innerText=book.title;
+  let p=document.createElement("p");
+  p.innerText=book.author;
+  let button=document.createElement("button");
+  button.innerText="Buy now";
+  // btn.classList.add('button');
 
-  box.append(image,title,author);
-  main.append(box);
+  li.append(img,h,p,button);
+  boxdiv.append(li);
 
   
   }
