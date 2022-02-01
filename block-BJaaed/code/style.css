@@ -69,9 +69,10 @@ h1
 }
 h 
 {
-    font-size: 24px;
+    font-size: 20px;
     color: black;
-    font-weight: 600;
+    font-weight: 500;
+    margin-top: 10px;
 
 }
 p
@@ -102,7 +103,7 @@ margin-top: 12px;
 }
 .box-div
 {
-    background-color: pink;
+    background-color: rgb(243, 223, 226);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
