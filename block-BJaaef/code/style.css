@@ -67,6 +67,7 @@ body {
   padding: 12px;
   display: flex;
   flex-direction: column;
+  margin: 12px 00;
 }
 
 .header
@@ -127,4 +128,7 @@ span
 .main-div
 {
   padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }

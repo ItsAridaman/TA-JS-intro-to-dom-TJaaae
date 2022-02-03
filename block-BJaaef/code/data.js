@@ -327,4 +327,41 @@ let got = {
   ],
 };
 
+let mainn=document.querySelector(".main-div");
+
+
+got.houses.forEach((house)=>
+{
+
+  house.people.forEach((ppl)=>
+  {
+    let box=document.createElement("div");
+    box.classList.add("box");
+
+    let imagebox=document.createElement("div");
+    imagebox.classList.add("image-div");
+
+    let image=document.createElement("img");
+
+    image.src=ppl.image;
+    imagebox.append(image);
+    let span=document.createElement("span");
+    span.innerText=ppl.name;
+    imagebox.append(span);
+    let h=document.createElement("h");
+    h.classList.add("h1");
+
+    h.innerText=ppl.description;
+    let learnMore=document.createElement("div");
+    learnMore.classList.add("learn-more");
+
+    let a=document.createElement("a");
+    a.innerText="Learn more";
+    learnMore.append(a);
+    box.append(imagebox,h,learnMore);
+    mainn.append(box);
+  })
+
+}
+)
 
